@@ -81,7 +81,7 @@
         </div>
         <div class="custom-control custom-checkbox">
           <input name="fields" value="date" id="date" type="checkbox" class="custom-control-input field">
-          <label for="date" class="custom-control-label">Zip Codes</label>
+          <label for="date" class="custom-control-label">Phone Number</label>
         </div>
         <div class="custom-control custom-checkbox">
           <input name="fields" value="company" id="company" type="checkbox" class="custom-control-input field">
@@ -174,7 +174,7 @@
       </select>
       <br>
       <div class="form-group">
-        <label for="formControlRange">Data Points</label> <strong>1 - 2000</strong>
+        <label for="formControlRange">Data Points</label> <strong>(e.g. 1 - 2000)</strong>
         <input class="form-control" type="number" value="10" id="count" name="count" min="10" max="2000">
       </div>
     <div class="form-group">
@@ -193,6 +193,11 @@
   <div class="product-device shadow-sm d-none d-md-block"></div>
   <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
+</div>
+<div class="tile position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div id="data" class="d-md-flex flex-md-equal w-100 my-md-3">
+    
+  </div>
 </div>
 <div class="tile position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
   <div class="col-md-5 p-lg-3 mx-auto my-3">
@@ -277,6 +282,7 @@ var form = $(this);
 var url = form.attr('action');
 var api = "https://api.faker.dev/table";
 var data = form.serializeArray().reduce(function(obj, item) {
+   // Collapsing Keys
     obj[item.name] = obj[item.name]?[obj[item.name], item.value].join(','):item.value;
     return obj;
 }, {});
@@ -284,10 +290,10 @@ console.log(data);
 $.ajax({
        type: "GET",
        url: api,
-       data: data, // serializes the form's elements.
+       data: data,
        success: function(data)
        {
-           alert(data); // show response from the php script.
+           $("#data").html(data);
        }
      });
 });
