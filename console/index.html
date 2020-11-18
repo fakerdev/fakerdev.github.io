@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Dylan Roy">
+    <title>FakerDev · Home</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+  </head>
+  <body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 mt-3 bg-white">
+  <h5 class="my-0 mr-md-auto font-weight-normal"><a href="/"><img style="height: 60px;" src="/images/cover.png"></a></h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="#">Generate Now!</a>
+    <a class="p-2 text-dark" href="/#features">Features</a>
+    <a class="p-2 text-dark" href="/#examples">Examples</a>
+    <a class="p-2 text-dark" href="/pricing/">Pricing</a>
+  </nav>
+</div>
+<div class="tile position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="main-info col-md-8 p-lg-5 mx-auto my-3">
+    <h1 class="display-4 font-weight-normal">Populate Fake Data</h1>
+    <p class="lead font-weight-normal">Generate fake data, or build your API query here.</p>
+    <form id="fake-form" action="/console/" method="GET">
+    <div class="text-left">
+    <label for="exampleFormControlSelect2"><strong>Generated Data</strong></label>
+    <div class="form-row">
+      <div class="col">
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="name" id="name" type="checkbox" class="custom-control-input field">
+          <label for="name" class="custom-control-label">Names</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="email" id="email" type="checkbox" class="custom-control-input field">
+          <label for="email" class="custom-control-label">Emails</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="address" id="address" type="checkbox" class="custom-control-input field">
+          <label for="address" class="custom-control-label">Addresses</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="date" id="date" type="checkbox" class="custom-control-input field">
+          <label for="date" class="custom-control-label">Dates</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="ssn" id="ssn" type="checkbox" class="custom-control-input field">
+          <label for="ssn" class="custom-control-label">SSNs</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="company_email" id="company_email" type="checkbox" class="custom-control-input field">
+          <label for="company_email" class="custom-control-label">Corporate Emails</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="city" id="city" type="checkbox" class="custom-control-input field">
+          <label for="city" class="custom-control-label">Cities</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="job" id="job" type="checkbox" class="custom-control-input field">
+          <label for="job" class="custom-control-label">Jobs</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="license_plate" id="license_plate" type="checkbox" class="custom-control-input field">
+          <label for="license_plate" class="custom-control-label">License Plates</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="date" id="date" type="checkbox" class="custom-control-input field">
+          <label for="date" class="custom-control-label">Zip Codes</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="company" id="company" type="checkbox" class="custom-control-input field">
+          <label for="company" class="custom-control-label">Companies</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input name="fields" value="url" id="url" type="checkbox" class="custom-control-input field">
+          <label for="url" class="custom-control-label">Websites</label>
+        </div>
+      </div>
+    </div>
+    <br>
+      <label for="exampleFormControlSelect2"><strong>Locales</strong></label>
+      <select name="locales" multiple class="form-control" id="locales">
+        <option>ar_AA</option>
+        <option>ar_EG</option>
+        <option>ar_JO</option>
+        <option>ar_PS</option>
+        <option>ar_SA</option>
+        <option>bg_BG</option>
+        <option>bs_BA</option>
+        <option>cs_CZ</option>
+        <option>de</option>
+        <option>de_AT</option>
+        <option>de_CH</option>
+        <option>de_DE</option>
+        <option>dk_DK</option>
+        <option>el_CY</option>
+        <option>el_GR</option>
+        <option>en</option>
+        <option>en_AU</option>
+        <option>en_CA</option>
+        <option>en_GB</option>
+        <option>en_IE</option>
+        <option>en_IN</option>
+        <option>en_NZ</option>
+        <option>en_PH</option>
+        <option>en_TH</option>
+        <option>en_US</option>
+        <option>es</option>
+        <option>es_CA</option>
+        <option>es_ES</option>
+        <option>es_MX</option>
+        <option>et_EE</option>
+        <option>fa_IR</option>
+        <option>fi_FI</option>
+        <option>fil_PH</option>
+        <option>fr_CA</option>
+        <option>fr_CH</option>
+        <option>fr_FR</option>
+        <option>fr_QC</option>
+        <option>he_IL</option>
+        <option>hi_IN</option>
+        <option>hr_HR</option>
+        <option>hu_HU</option>
+        <option>hy_AM</option>
+        <option>id_ID</option>
+        <option>it_CH</option>
+        <option>it_IT</option>
+        <option>ja_JP</option>
+        <option>ka_GE</option>
+        <option>ko_KR</option>
+        <option>la</option>
+        <option>lb_LU</option>
+        <option>lt_LT</option>
+        <option>lv_LV</option>
+        <option>mt_MT</option>
+        <option>ne_NP</option>
+        <option>nl_BE</option>
+        <option>nl_NL</option>
+        <option>no_NO</option>
+        <option>or_IN</option>
+        <option>pl_PL</option>
+        <option>pt_BR</option>
+        <option>pt_PT</option>
+        <option>ro_RO</option>
+        <option>ru_RU</option>
+        <option>sk_SK</option>
+        <option>sl_SI</option>
+        <option>sv_SE</option>
+        <option>ta_IN</option>
+        <option>th</option>
+        <option>th_TH</option>
+        <option>tl_PH</option>
+        <option>tr_TR</option>
+        <option>tw_GH</option>
+        <option>uk_UA</option>
+        <option>zh_CN</option>
+        <option>zh_TW</option>
+      </select>
+      <br>
+      <div class="form-group">
+        <label for="formControlRange">Data Points</label> <strong>1 - 2000</strong>
+        <input class="form-control" type="number" value="10" id="count" name="count" min="10" max="2000">
+      </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Format</label>
+      <select class="form-control" id="format" name="format">
+        <option>html</option>
+        <option>csv</option>
+        <option>json</option>
+      </select>
+    </div>
+  </div>
+    <input type="submit" class="btn btn-primary" value="Generate Data">
+    <input type="submit" class="btn btn-primary" value="Show API Request">
+  </form>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+</div>
+<div class="tile position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-3 mx-auto my-3">
+    <h1 class="display-4 font-weight-normal">Our Sponsors</h1>
+  </div>
+  <div class="d-md-flex flex-md-equal w-100 my-md-3">
+    <div class="tile bg-light mr-md-3 pt-3 px-3 pt-sm-5 px-sm-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Become A Sponsor</h2>
+        <p class="lead">Get more exposure for your company by sponsoring furture development, and our free tier.</p>
+      </div>
+    </div>
+    <div class="tile bg-light mr-md-3 pt-3 px-3 pt-sm-5 px-sm-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Become A Sponsor</h2>
+        <p class="lead">Get more exposure for your company by sponsoring furture development, and our free tier.</p>
+      </div>
+    </div>
+    <div class="dashed tile bg-light mr-md-3 pt-3 px-3 pt-sm-5 px-sm-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Join Us &plus;</h2>
+        <p class="lead">Sign Up for only <strong>$16/mo.</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container py-5">
+  <div class="row px-3">
+    <div class="col-12 col-md">
+      <img style="margin-left:-20px;height: 40px;" src="/images/cover.png">
+      <small class="d-block mb-3 text-muted">Provided With <span style="color:red;">&#9829;</span> By <a href="https://dylanroy.com">Dylan</a></small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Use Cases</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Enhance Mockups</a></li>
+        <li><a class="text-muted" href="#">App Integrations</a></li>
+        <li><a class="text-muted" href="#">Test Piplines</a></li>
+        <li><a class="text-muted" href="#">ML Data</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Fake Data</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Emails</a></li>
+        <li><a class="text-muted" href="#">Locations</a></li>
+        <li><a class="text-muted" href="#">User Profiles</a></li>
+        <li><a class="text-muted" href="#">Tables</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>&nbsp;</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Names</a></li>
+        <li><a class="text-muted" href="#">Phone Numbers</a></li>
+        <li><a class="text-muted" href="#">Credit Cards</a></li>
+        <li><a class="text-muted" href="#">SSN</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Docs</a></li>
+        <li><a class="text-muted" href="#">Pricing</a></li>
+        <li><a class="text-muted" href="#">Privacy</a></li>
+        <li><a class="text-muted" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script>
+  // this is the id of the form
+$("#fake-form").submit(function(e) {
+
+e.preventDefault(); // avoid to execute the actual submit of the form.
+
+var form = $(this);
+var url = form.attr('action');
+var api = "https://api.faker.dev/table";
+var data = form.serializeArray().reduce(function(obj, item) {
+    obj[item.name] = obj[item.name]?[obj[item.name], item.value].join(','):item.value;
+    return obj;
+}, {});
+console.log(data);
+$.ajax({
+       type: "GET",
+       url: api,
+       data: data, // serializes the form's elements.
+       success: function(data)
+       {
+           alert(data); // show response from the php script.
+       }
+     });
+});
+</script>
+</body>
+</html>
